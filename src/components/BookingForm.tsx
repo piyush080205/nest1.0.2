@@ -58,9 +58,32 @@ export default function BookingForm({ packageData, onClose }: BookingFormProps) 
             name: 'NE Tourism',
             description: packageData.title,
             order_id: data.orderId,
-            handler: function (response: any) {
-              toast.success('Booking confirmed! We will contact you shortly.');
-              onClose();
+            handler: async function (response: any) {
+              try {
+                const verifyResponse = await fetch('/api/verify-payment', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    razorpay_order_id: response.razorpay_order_id,
+                    razorpay_payment_id: response.razorpay_payment_id,
+                    razorpay_signature: response.razorpay_signature,
+                  }),
+                });
+
+                const verifyData = await verifyResponse.json();
+
+                if (verifyData.verified) {
+                  toast.success('Payment verified! Booking confirmed. We will contact you shortly.');
+                  onClose();
+                } else {
+                  toast.error('Payment verification failed. Please contact support.');
+                }
+              } catch (error) {
+                console.error('Payment verification error:', error);
+                toast.error('An error occurred during verification. Please contact support with your payment ID.');
+              }
             },
             prefill: {
               name: formData.fullName,
@@ -69,6 +92,11 @@ export default function BookingForm({ packageData, onClose }: BookingFormProps) 
             },
             theme: {
               color: '#0d9488',
+            },
+            modal: {
+              ondismiss: function() {
+                setIsSubmitting(false);
+              }
             },
           };
 
