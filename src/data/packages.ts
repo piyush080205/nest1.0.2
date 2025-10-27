@@ -96,7 +96,7 @@ export const tourPackages: TourPackage[] = [
     ],
     images: [
       'https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800',
-      'https://images.unsplash.com/photo-1626621341517-4a6b6b2a5f4d?w=800',
+      'https://images.unsplash.com/photo-1628070018796-a9f4e2dd482a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGF3YW5nJTIwbW9uYXN0ZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500',
       'https://images.unsplash.com/photo-1548013146-72479768bada?w=800',
     ],
     location: {
@@ -304,7 +304,7 @@ export const tourPackages: TourPackage[] = [
       'Travel insurance',
     ],
     images: [
-      'https://images.unsplash.com/photo-1626621341517-4a6b6b2a5f4d?w=800',
+      'https://images.unsplash.com/photo-1628070018796-a9f4e2dd482a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGF3YW5nJTIwbW9uYXN0ZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500',
       'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
       'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800',
     ],
@@ -546,7 +546,7 @@ export const tourPackages: TourPackage[] = [
     ],
     images: [
       'https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800',
-      'https://images.unsplash.com/photo-1626621341517-4a6b6b2a5f4d?w=800',
+      'https://images.unsplash.com/photo-1628070018796-a9f4e2dd482a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGF3YW5nJTIwbW9uYXN0ZXJ5fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500',
       'https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=800',
     ],
     location: {
